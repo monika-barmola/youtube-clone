@@ -71,7 +71,7 @@ By default, the backend server will run on `http://localhost:5000`.
 ### 1. Clone the Repository (if not already done)
 
 ```bash
-git clone https://github.com/your-repo/youtube-clone.git
+git clone https://github.com/monika-barmola/youtube-clone.git
 cd youtube-clone/frontend
 ```
 
