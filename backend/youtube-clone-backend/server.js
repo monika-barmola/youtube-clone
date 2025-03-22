@@ -21,8 +21,14 @@ app.use('/api/auth', authRoutes);
 app.use('/api/videos', videoRoutes);
 app.use('/api/comments', commentRoutes);
 
+
+const mongodbUsername = process.env.MONGO_USERNAME || "Monika";
+const mongodbPassword = process.env.MONGO_PASSWORD || "0uGvGTKA7VHrzyXi";
+const mongoURI = `mongodb+srv://${mongodbUsername}:${mongodbPassword}@monikaytclone.wyww9.mongodb.net/?appName=MonikaYtClone`;
+
+
 // Connect to MongoDB and start the server
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/youtube-clone', 
+mongoose.connect(mongoURI, 
     { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
